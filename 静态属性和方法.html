@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Animal {
+            constructor(name,age){
+                //成员属性
+                this.name=name;
+                this.age=age;
+            }
+            //成员方法
+            walk(){
+                console.log(`${this.name}在走路。。。。。`)
+            }
+            static say(n){//静态方法
+                console.log(`我今年${n}岁了`)
+            }
+
+        }
+        Animal.sexuality="男"//静态属性
+
+        let dog=new Animal("大白",5);
+        dog.walk()
+        Animal.say(100)
+       console.log(Animal.sexuality) 
+
+    </script>
+</body>
+
+</html>
