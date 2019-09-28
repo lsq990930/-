@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var distributeCandies = function (candies) {
+            var m = [];
+            for (var i = 0; i < candies.length; i++) {
+                if (m.indexOf(candies[i]) == -1) {
+                    m.push(candies[i]);
+                }
+                if (m.length == candies.length / 2) {
+
+                    return m.length
+                } else if (m.length > candies.length / 2) {
+
+                    m.length--;
+
+                }
+            }
+            return m.length
+        };
+        console.log(distributeCandies([1, 1, 1, 1, 1, 2,3,4]))
+
+    </script>
+</body>
+
+</html>

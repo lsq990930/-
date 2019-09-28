@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var dayOfTheWeek = function (day, month, year) {
+            var time = new Date(year,month-1,day)
+            var date = time.getDay();
+            switch(date){
+                case 0:
+                return "Sunday";
+                break;
+                case 1:
+                return "Monday";
+                break;
+                case 2:
+                return "Tuesday";
+                break;
+                case 3:
+                return "Wednesday";
+                break;
+                case 4:
+                return "Thursday";
+                break;
+                case 5:
+                return "Friday";
+                break;
+                case 6:
+                return "Saturday";
+                break;
+            }
+
+            // console.log(date)
+        };
+       console.log(dayOfTheWeek(22, 9, 2019)) 
+
+    </script>
+</body>
+
+</html>

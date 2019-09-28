@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var intersection = function (nums1, nums2) {
+            var a=[];
+            for(var i=0;i<nums1.length;i++){
+                for(var j=0;j<nums2.length;j++){
+                    if(nums1[i]==nums2[j]){
+                        a[i]=nums2[j]
+                    
+                    }
+                }
+            }
+            
+            var arr0=[];
+            for(var i in a){
+                if(arr0.indexOf(a[i])==-1){
+                    arr0.push(a[i]);
+                }
+            }
+            return arr0;
+        }
+
+
+
+    
+        intersection([1,2,2,1],[2,2])
+    </script>
+</body>
+
+</html>

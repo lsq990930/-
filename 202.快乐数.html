@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var isHappy = function (n) {
+
+            for (var j = 0;j<10; j++) {
+                var n = n + '';
+                var a = 0;
+                var num1 = n.split("")
+
+                for (var i = 0; i < num1.length; i++) {
+                    a += num1[i] * num1[i]
+                }
+
+                if (a != 1) {
+                    console.log(false);
+                    n = a;
+                    continue;
+                }else{
+                    console.log(true);
+                    break;
+                }
+            }
+            if(j<9){
+                return true;
+            }else{
+               return false;
+            }
+
+
+        };
+       alert(isHappy(19)) 
+
+    </script>
+</body>
+
+</html>

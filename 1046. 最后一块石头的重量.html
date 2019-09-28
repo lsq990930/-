@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var lastStoneWeight = function (stones) {
+
+            for (let i = 0; i < stones.length+100; i++) {
+                if(stones[0]!=undefined&&stones[1]==undefined){
+                    return stones[0];
+                }else if(stones[0]==undefined&&stones[1]==undefined){
+                    return 0;
+                }
+
+                stones.sort((a, b) => b - a);
+
+                var [y, x = 0] = [stones[0], stones[1]];
+                console.log(stones[0], stones[1])
+                if (y == x) {
+
+                    stones.splice(0, 1)
+                    stones.splice(0, 1)
+
+                } else {
+
+                    stones[0] = stones[0] - stones[1]
+                    stones.splice(1, 1);
+                    // console.log(stones[0], stones[1])
+                   
+                }
+
+            }
+            
+        };
+        console.log(lastStoneWeight([434,667,378,919,212,902,240,257,208,996,411,222,557,634,425,949,755,833,785,886,40,159,932,157,764,916,85,300,130,278]))
+        // lastStoneWeight([9,3,2,10])  
+    </script>
+</body>
+
+</html>

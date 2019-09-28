@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        罗马数字包含以下七种字符: I， V， X， L，C，D 和 M。
+        */
+        var romanToInt = function (s) {
+            //定义一个对象来存放数据
+            var num = { 'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000 };
+            //定义一个空数组
+            var a = [];
+            //字符串转数组
+            a = s.split("");
+            //定义一个变量，初值为0，用来计算和。
+            var b = 0;
+            for (var i = 0; i < a.length; i++) {
+                //比如4表示为IV
+                if (num[a[i]] < num[a[i + 1]]) {
+                    //右边字符对应的数字减去左边字符对应的数字
+                    b += (num[a[i + 1]] - num[a[i]]);
+                    i++;
+                } else {
+                    //左边字符对应的数字加上右边字符对应的数字
+                    b += num[a[i]];
+                }
+
+            }
+            return b;
+
+        }
+        alert(romanToInt("MCMXCIV"))//1994
+        // alert(romanToInt("XXVII"))//27
+
+    </script>
+</body>
+
+</html>

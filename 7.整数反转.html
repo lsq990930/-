@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var reverse = function (x) {
+            var x = x + ""
+            x = x.split("")
+            var a = [];
+            var b = 0
+            for (var i = x.length - 1; i >= 0; i--) {
+                a[b] = x[i];
+                b++;
+            }
+            for (var j = 0; j < a.length; j++) {
+                if (a[j] == "-") {
+                    a.splice(j, 1);
+                    a.unshift("-");
+                }
+            }
+            if(a[0]=="0"&&a[1]<="9"){
+                    a.splice(0,1);
+                    console.log(a)
+                }
+            a=a.join("");
+            a=parseFloat(a)
+
+            if(a>=Math.pow(2,31)-1||a<=Math.pow(-2,31)){
+                return 0;
+            }else{
+               return a;  
+            }
+           
+           
+        };
+       alert(reverse(100)) 
+    </script>
+</body>
+
+</html>

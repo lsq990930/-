@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var plusOne = function (digits) {
+            var a = digits[digits.length - 1];
+            var k = 9
+            for (var i = digits.length - 1; i > 0; i--) {
+
+                if (digits[i] + 1 > k) {
+                    digits[i] = 0;
+
+                    digits[i - 1] = digits[i - 1] + 1;S
+                    k = 10
+                    console.log("dasd")
+                    continue;
+
+                } else {
+                    if (a < 9) {
+                        digits.pop();
+                        digits.push(a + 1)
+
+                        break;
+                    } else {
+                        digits.pop();
+                        digits.push(digits[digits.length - 1]);
+                        digits[digits.length - 1] = 0;
+                        break;
+                    }
+
+                }
+            }
+            if (digits[0] > 9) {
+                digits.shift();
+                digits.unshift(0);
+                digits.unshift(1);
+            }
+            if (digits.length == 1 && digits[0] >= 9) {
+                digits.shift();
+                digits.unshift(0);
+                digits.unshift(1);
+            }
+            if (digits.length == 1) {
+                digits[0] = digits[0] + 1;
+            }
+            return digits;
+        };
+        plusOne([5, 2, 2, 6, 5, 7, 1, 9, 0, 3, 8, 6, 8, 6, 5, 2, 1, 8, 7, 9, 8, 3, 8, 4, 7, 2, 5, 9, 9])
+
+    </script>
+</body>
+
+</html>

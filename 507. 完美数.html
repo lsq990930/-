@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var checkPerfectNumber = function (num) {
+        //     var a = num / 2;
+        //     var arri = [];
+        //     var arrj = [];
+        //     var b = 0;
+        //     var c = 0;
+
+        //     if(num==1||num==2||num==3||num==4){
+        //         return false
+        //     }
+        //     for (var i = 0; i < a; i++) {
+        //         for (var j = a; j > 1; j--) {
+        //             if (i * j == num) {
+        //                 arri[b] = i;
+        //                 arrj[b] = j;
+        //                 b += 1
+        //             }
+        //         }
+
+        //     }
+        //     // console.log(arri,arrj)
+        //     for (var x = 0; x < arri.length; x++) {
+        //         for (var y = 0; y < arrj.length; y++) {
+        //             if (arri[x] == arrj[y]) {
+        //                 arrj.splice(y, 1);
+        //                 y--;
+        //                 // console.log(arri,arrj)
+        //                 var arr = arri.concat(arrj);
+
+        //             }else{
+        //                 var arr = arri.concat(arrj);
+        //             }
+        //         }
+        //     }
+        //     // console.log(arr)
+        //     for (var k = 0; k < arr.length; k++) {
+        //         c += arr[k]
+        //     }
+        //     if (c + 1 == num) {
+        //         // return true
+        //         console.log(true)
+        //     } else {
+        //         // return false
+        //         console.log(false)
+        //     }
+        // };
+        // checkPerfectNumber(132)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // var checkPerfectNumber = function (num) {
+        //     var a = parseInt(num / 2) ;
+        //    var b=0;
+        //    var c=0;
+        //    var d;
+        //     for (var i = 0; i < a; i++) {
+        //         for (var j = a; j >= i; j--) {
+        //             if (i * j == num) {
+        //               b+=i;
+        //               c+=j;
+        //               d=b+c+1;
+        //             }
+        //         }
+                
+        //     }
+        // //   console.log(d)
+        //   if(d==num){
+        //       return true
+        //   }else{
+        //       return false
+        //   }
+        // };
+        // checkPerfectNumber(6)
+
+
+
+
+        var checkPerfectNumber = function (num) {
+          var a=0;
+         if(num==1){
+             return false
+         }
+            for (var i = 2; i < num; i++) {
+               if(num%i==0){
+                   a+=i
+               }
+                
+            }
+        if(a+1==num){
+            return true;
+        }else{
+            return false
+        }
+        
+        };
+        checkPerfectNumber(1)
+    </script>
+</body>
+
+</html>

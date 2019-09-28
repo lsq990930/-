@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var game = function (guess, answer) {
+            let num=0//定义一个初值为0的变量用来保存次数
+            //遍历数组
+            for(var i=0;i<guess.length;i++){
+                if(guess[i]==answer[i]){
+                    num++;
+                }
+            }
+            return num;//返回结果
+        };
+        game([1,2,3],[1,3,2])
+    </script>
+</body>
+
+</html>

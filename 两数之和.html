@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var twoSum = function (nums, target) {
+            var num = nums;
+            var a = num[0];
+            var b=[];
+            for (var i = 0, len = num.length; i < len; i++) {
+
+                for (var k = 0; k <len; k++) {
+                    a = num[k];
+                    if (num[i] + num[k] == target&&i!=k) {
+                        b=[k,i]
+                    }
+
+                }
+            }
+        return b;
+        }
+  
+    </script>
+</body>
+
+</html>

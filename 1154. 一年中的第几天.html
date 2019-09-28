@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var dayOfYear = function (date) {
+            var time=new Date(date)
+           var year=parseInt(date)
+           var time1=new Date(year,0,1)
+            var time2=(time-time1)/1000/60/60/24
+           return Math.ceil(time2)
+          
+        };
+       console.log(dayOfYear("2019-01-09")) ;
+
+
+    </script>
+</body>
+
+</html>
